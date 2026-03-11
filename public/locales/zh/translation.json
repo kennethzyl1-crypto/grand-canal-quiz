@@ -1,0 +1,20 @@
+{
+  "quizTitle": "隋唐大运河知识测验",
+  "quizSubtitle": "测测你对这条千年运河的了解有多少？",
+  "startButton": "开始答题",
+  "nextButton": "下一题",
+  "correctMark": "✓ 正确答案",
+  "resultTitle": "测试完成！",
+  "yourScore": "你的总分是: {{score}} / {{totalScore}}",
+  "passTitle": "恭喜你！",
+  "passMessage": "你已经获得隋唐大运河航运公司经营执照，即可通航。",
+  "failTitle": "还差一点...",
+  "failMessage": "继续努力，深入了解大运河的历史，下次一定能成功！",
+  "restartButton": "再试一次",
+  "correctFeedback1": "您真是博古通今，连隋炀帝都想请您当顾问！",
+  "correctFeedback2": "厉害！看来您是坐着自家龙舟穿越过大运河的吧？",
+  "correctFeedback3": "答对了！您的知识储备就像大运河一样深不可测。",
+  "incorrectFeedback1": "哎呀，差一点就说服了船上的漕运官！",
+  "incorrectFeedback2": "别灰心，就算是当年的船夫也未必知道这么多。",
+  "incorrectFeedback3": "看来这道题的“水”有点深，再试试下一题吧！"
+}

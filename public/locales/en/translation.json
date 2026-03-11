@@ -1,0 +1,20 @@
+{
+  "quizTitle": "Sui & Tang Grand Canal Quiz",
+  "quizSubtitle": "Test your knowledge of this ancient canal.",
+  "startButton": "Start Quiz",
+  "nextButton": "Next",
+  "correctMark": "✓ Correct",
+  "resultTitle": "Quiz Complete!",
+  "yourScore": "Your score is: {{score}} / {{totalScore}}",
+  "passTitle": "Congratulations!",
+  "passMessage": "You have earned the Grand Canal Shipping Company license!",
+  "failTitle": "Almost there...",
+  "failMessage": "Keep trying! A deeper understanding of the canal's history will lead to success.",
+  "restartButton": "Try Again",
+  "correctFeedback1": "You are a true historian! Even Emperor Yang would want you as an advisor!",
+  "correctFeedback2": "Amazing! It seems you've sailed the Grand Canal on your own dragon boat.",
+  "correctFeedback3": "Correct! Your knowledge is as deep as the Grand Canal itself.",
+  "incorrectFeedback1": "Oh no, you almost convinced the canal official!",
+  "incorrectFeedback2": "Don't worry, even the boatmen of the past might not have known this.",
+  "incorrectFeedback3": "This question seems to be in deep water. Try the next one!"
+}
