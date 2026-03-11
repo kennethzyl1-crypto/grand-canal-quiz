@@ -15,7 +15,9 @@ const Result = ({ score, totalScore, restartQuiz }) => {
       {isPass ? (
         <div className="p-6 bg-green-100 border-2 border-green-300 rounded-lg">
           <h3 className="text-2xl font-semibold text-green-800">{t('passTitle')}</h3>
-          <p className="mt-2 text-green-700">{t('passMessage')}</p>
+          <p className="mt-2 text-green-700">
+            {score === 120 ? t('licenseMessage') : t('passMessage')}
+          </p>
         </div>
       ) : (
         <div className="p-6 bg-red-100 border-2 border-red-300 rounded-lg">
