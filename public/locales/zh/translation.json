@@ -8,7 +8,7 @@
   "yourScore": "你的总分是: {{score}} / {{totalScore}}",
   "passTitle": "恭喜你！",
   "passMessage": "干得漂亮！您对隋唐大运河的了解非常深入。",
-    "licenseMessage": "恭喜您，您已获得隋唐大运河航运公司经营许可证，可即刻通航！",
+    "passMessage_alt": "恭喜你！你已获得隋唐大运河航运公司营业执照，可即刻起航！",
     "failTitle": "还需努力",
   "failMessage": "继续努力，深入了解大运河的历史，下次一定能成功！",
   "restartButton": "再试一次",

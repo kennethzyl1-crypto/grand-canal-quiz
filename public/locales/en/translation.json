@@ -8,7 +8,7 @@
   "yourScore": "Your score is: {{score}} / {{totalScore}}",
   "passTitle": "Congratulations!",
   "passMessage": "Well done! You have a deep understanding of the Sui and Tang Grand Canal.",
-    "licenseMessage": "Congratulations! You have obtained the business license for the Sui and Tang Grand Canal Shipping Company. You can start sailing immediately!",
+    "passMessage_alt": "Congratulations! You have obtained the business license for the Sui and Tang Grand Canal Shipping Company. You can start sailing immediately!",
     "failTitle": "Needs Improvement",
   "failMessage": "Keep trying! A deeper understanding of the canal's history will lead to success.",
   "restartButton": "Try Again",
