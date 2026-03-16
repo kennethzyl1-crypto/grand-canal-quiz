@@ -146,14 +146,14 @@ export const quizData = [
   // 13
   {
     question: {
-      zh: '为了让船只顺利通过运河的水位落差，北宋科学家乔惟岳发明了哪种革命性的水利设施？',
-      en: 'To allow boats to pass through different water levels on the canal, what revolutionary hydraulic facility was invented by the Northern Song scientist Qiao Weiyue?'
+      zh: '在唐代，为了解决运河航运中的水位控制问题，人们发明了一种早期的船闸雏形，它是什么？',
+      en: 'During the Tang Dynasty, what early form of canal lock was invented to help manage water levels for shipping on the Grand Canal?'
     },
     options: {
-      zh: ['龙骨水车', '翻车', '复式船闸', '筒车'],
-      en: ['Dragon-bone water lift', 'Square-pallet chain pump', 'Pound lock (double gate)', 'Bamboo water wheel']
+      zh: ['斗门', '龙骨水车', '筒车', '复闸'],
+      en: ['Flash Lock (Doumen)', 'Dragon Bone Wheel', 'Tube-wheel', 'Pound Lock']
     },
-    answer: 2
+    answer: 0
   },
   // 14
   {
