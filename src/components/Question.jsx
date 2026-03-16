@@ -67,7 +67,7 @@ const Question = ({ question, options, answer, handleAnswerOptionClick, showFeed
             key={option.originalIndex} 
             onClick={() => handleAnswerOptionClick(option.originalIndex === answer, option.originalIndex)}
             disabled={showFeedback}
-            className={`w-full text-left p-2 rounded-lg transition-colors duration-200 ease-in-out flex justify-between items-center text-xl ${getButtonClass(option.originalIndex)}`}
+            className={`w-full text-left p-2 rounded-lg transition-colors duration-200 ease-in-out flex justify-between items-center text-2xl ${getButtonClass(option.originalIndex)}`}
           >
             <span>{option.text}</span>
             <div className="flex items-center">
