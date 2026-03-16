@@ -59,7 +59,7 @@ const Question = ({ question, options, answer, handleAnswerOptionClick, showFeed
   return (
     <>
       <div className="mb-6">
-        <h2 className="text-3xl font-semibold text-gray-800">{question}</h2>
+        <h2 className="text-4xl font-semibold text-gray-800">{question}</h2>
       </div>
       <div className="flex flex-col space-y-4">
         {shuffledOptions.map((option) => (
@@ -67,7 +67,7 @@ const Question = ({ question, options, answer, handleAnswerOptionClick, showFeed
             key={option.originalIndex} 
             onClick={() => handleAnswerOptionClick(option.originalIndex === answer, option.originalIndex)}
             disabled={showFeedback}
-            className={`w-full text-left p-4 rounded-lg transition-all duration-200 ease-in-out flex justify-between items-center text-lg ${getButtonClass(option.originalIndex)}`}
+            className={`w-full text-left p-4 rounded-lg transition-all duration-200 ease-in-out flex justify-between items-center text-xl ${getButtonClass(option.originalIndex)}`}
           >
             <span>{option.text}</span>
             <div className="flex items-center">
