@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const correctFeedback = [
@@ -15,16 +15,34 @@ const incorrectFeedback = [
 
 const Question = ({ question, options, answer, handleAnswerOptionClick, showFeedback, selectedAnswer, handleNextQuestion }) => {
   const { t } = useTranslation();
+  const [shuffledOptions, setShuffledOptions] = useState([]);
 
-  const getButtonClass = (index) => {
+  useEffect(() => {
+    if (options && options.length > 0) {
+      const optionsWithOriginalIndex = options.map((option, index) => ({
+        text: option,
+        originalIndex: index
+      }));
+
+      // Fisher-Yates shuffle algorithm
+      for (let i = optionsWithOriginalIndex.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [optionsWithOriginalIndex[i], optionsWithOriginalIndex[j]] = [optionsWithOriginalIndex[j], optionsWithOriginalIndex[i]];
+      }
+      
+      setShuffledOptions(optionsWithOriginalIndex);
+    }
+  }, [options]);
+
+  const getButtonClass = (optionOriginalIndex) => {
     if (!showFeedback) {
       return "bg-gray-100 hover:bg-blue-100";
     }
-    if (index === answer) {
-      return "bg-green-300 border-green-500"; // Correct answer
+    if (optionOriginalIndex === answer) {
+      return "bg-green-300"; // Correct answer
     }
-    if (index === selectedAnswer) {
-      return "bg-red-300 border-red-500"; // Incorrect user choice
+    if (optionOriginalIndex === selectedAnswer) {
+      return "bg-red-300"; // Incorrect user choice
     }
     return "bg-gray-100"; // Other incorrect options
   };
@@ -44,17 +62,17 @@ const Question = ({ question, options, answer, handleAnswerOptionClick, showFeed
         <h2 className="text-2xl font-semibold text-gray-800">{question}</h2>
       </div>
       <div className="flex flex-col space-y-4">
-        {options.map((option, index) => (
+        {shuffledOptions.map((option) => (
           <button 
-            key={index} 
-            onClick={() => handleAnswerOptionClick(index === answer, index)}
+            key={option.originalIndex} 
+            onClick={() => handleAnswerOptionClick(option.originalIndex === answer, option.originalIndex)}
             disabled={showFeedback}
-            className={`w-full text-left p-4 rounded-lg border-2 transition-all duration-200 ease-in-out flex justify-between items-center ${getButtonClass(index)}`}
+            className={`w-full text-left p-4 rounded-lg transition-all duration-200 ease-in-out flex justify-between items-center ${getButtonClass(option.originalIndex)}`}
           >
-            <span>{option}</span>
+            <span>{option.text}</span>
             <div className="flex items-center">
-              {showFeedback && index === selectedAnswer && !isCorrect && <span className="font-bold text-red-800 mr-2">❌</span>}
-              {showFeedback && index === answer && <span className="font-bold text-green-800">{t('correctMark')}</span>}
+              {showFeedback && option.originalIndex === selectedAnswer && !isCorrect && <span className="font-bold text-red-800 mr-2">❌</span>}
+              {showFeedback && option.originalIndex === answer && <span className="font-bold text-green-800">{t('correctMark')}</span>}
             </div>
           </button>
         ))}

@@ -22,7 +22,7 @@ const Result = ({ score, totalScore, restartQuiz }) => {
           <p className="mt-2 text-green-700">{t(randomMessageKey)}</p>
         </div>
       ) : (
-        <div className="p-6 bg-red-100 border-2 border-red-300 rounded-lg">
+        <div className="p-6 bg-red-100 border-2 border-red-300 rounded-lg shake-animation">
           <h3 className="text-2xl font-semibold text-red-800">{t('failTitle')}</h3>
           <p className="mt-2 text-red-700">{t('failMessage')}</p>
         </div>
