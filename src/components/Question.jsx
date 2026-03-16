@@ -36,15 +36,15 @@ const Question = ({ question, options, answer, handleAnswerOptionClick, showFeed
 
   const getButtonClass = (optionOriginalIndex) => {
     if (!showFeedback) {
-      return "bg-transparent hover:bg-gray-100"; // Clean style, subtle hover
+      return "hover:text-blue-600"; // Subtle hover effect on text
     }
     if (optionOriginalIndex === answer) {
-      return "bg-green-300"; // Correct answer
+      return "text-green-600 font-bold"; // Correct answer text turns green and bold
     }
     if (optionOriginalIndex === selectedAnswer) {
-      return "bg-red-300"; // Incorrect user choice
+      return "text-red-600 line-through"; // Incorrect user choice text turns red and gets a line-through
     }
-    return "bg-transparent"; // Other incorrect options (no background)
+    return "text-gray-500"; // Other options fade out
   };
 
   const isCorrect = selectedAnswer === answer;
@@ -67,7 +67,7 @@ const Question = ({ question, options, answer, handleAnswerOptionClick, showFeed
             key={option.originalIndex} 
             onClick={() => handleAnswerOptionClick(option.originalIndex === answer, option.originalIndex)}
             disabled={showFeedback}
-            className={`w-full text-left p-4 rounded-lg transition-all duration-200 ease-in-out flex justify-between items-center text-xl ${getButtonClass(option.originalIndex)}`}
+            className={`w-full text-left p-2 rounded-lg transition-colors duration-200 ease-in-out flex justify-between items-center text-xl ${getButtonClass(option.originalIndex)}`}
           >
             <span>{option.text}</span>
             <div className="flex items-center">
