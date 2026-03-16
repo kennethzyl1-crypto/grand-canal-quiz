@@ -36,7 +36,7 @@ const Question = ({ question, options, answer, handleAnswerOptionClick, showFeed
 
   const getButtonClass = (optionOriginalIndex) => {
     if (!showFeedback) {
-      return "bg-gray-100 hover:bg-blue-100";
+      return "bg-transparent hover:bg-gray-100"; // Clean style, subtle hover
     }
     if (optionOriginalIndex === answer) {
       return "bg-green-300"; // Correct answer
@@ -44,7 +44,7 @@ const Question = ({ question, options, answer, handleAnswerOptionClick, showFeed
     if (optionOriginalIndex === selectedAnswer) {
       return "bg-red-300"; // Incorrect user choice
     }
-    return "bg-gray-100"; // Other incorrect options
+    return "bg-transparent"; // Other incorrect options (no background)
   };
 
   const isCorrect = selectedAnswer === answer;
